@@ -1,0 +1,338 @@
+/*ma barre de navigation*/
+header {
+    width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.nav-button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 15px 40px;
+    background-color: darkgoldenrod;
+    border-radius: 15px;
+}
+.nav-button:hover {
+    background-color: #923923; 
+    transition: background-color 0.3s ease; /* Rend le changement de couleur fluide */
+    cursor: pointer; /* Force l'apparition de la petite main Trouvée sur GEMINI */
+}
+
+.accueil-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+}
+.accueil_titre{
+    font-size: 70px;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 50px;
+    color: #923923;
+}
+
+main {
+    background-color: rgb(252, 242, 228); /* couleur de mon fond crème*/
+}
+
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+.section-title {
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    margin-top: 25px;
+    color: rgb(45, 68, 99);
+}
+.text-content{
+    padding: 30px;
+}
+
+/*page Jeju*/
+.jeju-container {
+    display: flex;
+    /* j'ctive mode colonnes */
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    /* 2 colonnes de largeur égale */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 400px;
+    /* Optionnel : pour limiter la largeur totale */
+}
+
+.stat-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.traditions {
+    display: flex;
+    /* j'aligne les div enfants côte à côte */
+    gap: 40px;
+    padding: 20px;
+    align-items: flex-start;
+    text-transform: column 2;
+}
+
+.col-image img {
+    width: 100%;
+    /* L'image remplit 3 parts */
+    height: auto;
+    border-radius: 40px;
+    display: block;
+}
+
+/* On diminue la place du texte au centre */
+.col-texte-double {
+    flex: 2;
+}
+
+/* les 2 colonnes de texte internes */
+.colonnes-interne {
+    column-count: 2;
+    column-gap: 20px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.col-image img {
+    width: 100%;
+    /* pour image largeur de sa colonne */
+    height: auto;
+    border-radius: 40px;
+}
+
+/* mes colonnes de texte */
+.colonnes-interne {
+    column-count: 2;
+    /* Divise le contenu en 2*/
+    column-gap: 20px;
+    text-align: justify;
+}
+
+/* Conteneur principal en 3 colonnes */
+.cuisine-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    /* Pour se rapprocher du visuel */
+}
+
+/* --- COLONNE GAUCHE --- */
+.cuisine-col-gauche {
+    flex: 1;
+}
+
+.liste-mer {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.legende-plats {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.soju-bloc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+/*
+.soju-bloc img {
+    width: 50px;
+}
+
+/* --- COLONNE CENTRE (Photos) --- */
+.cuisine-col-centre {
+    display: flex;
+    flex: 2;
+    gap: 15px;
+    text-align: center;
+}
+
+.photo-item {
+    flex: 1;
+}
+
+.photo-item img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 20px;
+    max-height: 450px;
+    /* Sécurité pour ne pas que les images sortent de l'écran */
+}
+
+.photo-item p {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: bold;
+}
+
+/* --- COLONNE DROITE --- */
+.cuisine-col-droite {
+    flex: 1;
+    position: relative;
+}
+
+.mandarine-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.mandarine-header img {
+   width: 150px;
+    margin-left: auto;  /* Pousse l'image vers la droite */
+    margin-right: auto; /* Si combiné avec le premier, centre l'image */
+    margin-top: -20px;  /* Pour la faire remonter si nécessaire */
+}
+
+.cuisine-col-droite p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.requin-bloc img{
+    border-radius: 40px;
+}
+
+.cuisine-col-droite img{
+    border-radius: 20px;
+}
+
+/* --- RESPONSIVE DESIGN (Tablettes et Mobiles) --- */
+
+@media screen and (max-width: 768px) {
+    
+    /* On empile les boutons du menu de navigation */
+    .main-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-button {
+        width: 80%; /* Les boutons prennent presque toute la largeur */
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    /* Pour empiler les 3 images de l'accueil verticalement */
+    .accueil-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .accueil-column img {
+        width: 100%;
+        max-width: 400px; /* Évite que l'image ne devienne géante sur tablette */
+        height: auto;
+    }
+
+    /* On réduit la taille du titre pour mobile */
+    h1 {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+    /* --- Styles spécifiques pour la page Jeju (Mobile) --- */
+
+    /* On empile le texte et les stats */
+    .jeju-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* La grille de stats passe en 1 seule colonne ou reste en 2 selon ton choix */
+    /* Ici, on la laisse en 2 colonnes pour gagner de la place en hauteur */
+    .stats-grid {
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Section Traditions : on empile les images et le texte */
+    .traditions {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* On annule les colonnes de texte internes pour que ce soit lisible sur mobile */
+    .colonnes-interne {
+        column-count: 1;
+    }
+
+    /* On s'assure que les images de Jeju prennent la largeur disponible */
+    .col-image img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* Section Cuisine : on empile les 3 colonnes principales */
+    .cuisine-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Les photos de plats se mettent les unes sous les autres */
+    .cuisine-col-centre {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .photo-item img {
+        max-height: 300px; /* On réduit un peu la hauteur pour mobile */
+    }
+
+    /* On centre les éléments de la colonne de droite (mandarine) */
+    .cuisine-col-droite {
+        text-align: center;
+    }
+
+    .mandarine-header img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    /* Bannière du haut : on ajuste l'image et le texte */
+    .banniere-container img {
+        width: 100%;
+        height: 200px; /* On limite la hauteur pour ne pas manger tout l'écran */
+        object-fit: cover;
+    }
+
+    .banniere-container h1 {
+        font-size: 24px;
+    }
+}
