@@ -1,0 +1,33 @@
+/* --- STYLES SPÉCIFIQUES À L'ACCUEIL --- */
+/* Le conteneur des 3 colonnes/images */
+.accueil-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Ton titre qui posait problème (on utilise la version fluide) */
+.accueil_titre {
+    font-size: clamp(30px, 8vw, 70px); 
+    text-align: center;
+    color: #923923;
+    margin: 20px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Le comportement des colonnes sur l'accueil */
+.accueil-column img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* --- RESPONSIVE ACCUEIL --- */
+@media screen and (max-width: 768px) {
+    .accueil-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

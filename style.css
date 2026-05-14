@@ -1,4 +1,4 @@
-/*ma barre de navigation*/
+/* STYLES toutes mes pages */
 header {
     width: 100%;
 }
@@ -15,25 +15,49 @@ header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: antiquewhite;
     font-size: 20px;
+    text-align: center;
+    flex: 1;
     padding: 15px 40px;
-    background-color: darkgoldenrod;
-    border-radius: 15px;
-}
-.nav-button:hover {
-    background-color: #923923; 
-    transition: background-color 0.3s ease; /* Rend le changement de couleur fluide */
-    cursor: pointer; /* Force l'apparition de la petite main Trouvée sur GEMINI */
+    background-color: rgb(56, 73, 56);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.accueil-container {
+.nav-button:hover {
+    background-color: rgb(15, 84, 94);
+    cursor: pointer;
+}
+
+.sub-nav {
     display: flex;
-    width: 100%;
-    padding: 20px;
+    color: antiquewhite;
     justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
 }
-.accueil_titre{
-    font-size: 70px;
+
+.sub-nav a {
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+    font-size: 18px;
+    background-color: rgb(15, 84, 94);
+    padding: 8px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
+
+.sub-nav a:hover {
+    background-color: #0e4e97;
+    color: #e7c553;
+    cursor: pointer;
+}
+
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -43,9 +67,8 @@ h1 {
 }
 
 main {
-    background-color: rgb(252, 242, 228); /* couleur de mon fond crème*/
+    background-color: rgb(252, 242, 228);
 }
-
 
 h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -59,14 +82,13 @@ h2 {
     margin-top: 25px;
     color: rgb(45, 68, 99);
 }
-.text-content{
+
+.text-content {
     padding: 30px;
 }
 
-/*page Jeju*/
 .jeju-container {
     display: flex;
-    /* j'ctive mode colonnes */
     gap: 30px;
     align-items: center;
     padding: 20px;
@@ -74,11 +96,9 @@ h2 {
 
 .stats-grid {
     display: grid;
-    /* 2 colonnes de largeur égale */
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     max-width: 400px;
-    /* Optionnel : pour limiter la largeur totale */
 }
 
 .stat-card {
@@ -92,50 +112,27 @@ h2 {
 
 .traditions {
     display: flex;
-    /* j'aligne les div enfants côte à côte */
     gap: 40px;
     padding: 20px;
     align-items: flex-start;
-    text-transform: column 2;
 }
 
-.col-image img {
-    width: 100%;
-    /* L'image remplit 3 parts */
-    height: auto;
-    border-radius: 40px;
-    display: block;
-}
-
-/* On diminue la place du texte au centre */
 .col-texte-double {
     flex: 2;
 }
 
-/* les 2 colonnes de texte internes */
-.colonnes-interne {
-    column-count: 2;
-    column-gap: 20px;
-    text-align: left;
-    font-size: 1rem;
-}
-
 .col-image img {
     width: 100%;
-    /* pour image largeur de sa colonne */
     height: auto;
     border-radius: 40px;
 }
 
-/* mes colonnes de texte */
 .colonnes-interne {
     column-count: 2;
-    /* Divise le contenu en 2*/
     column-gap: 20px;
     text-align: justify;
 }
 
-/* Conteneur principal en 3 colonnes */
 .cuisine-container {
     display: flex;
     justify-content: space-between;
@@ -143,10 +140,8 @@ h2 {
     gap: 20px;
     padding: 20px;
     font-family: Arial, sans-serif;
-    /* Pour se rapprocher du visuel */
 }
 
-/* --- COLONNE GAUCHE --- */
 .cuisine-col-gauche {
     flex: 1;
 }
@@ -165,14 +160,8 @@ h2 {
     display: flex;
     align-items: center;
     gap: 10px;
-
-}
-/*
-.soju-bloc img {
-    width: 50px;
 }
 
-/* --- COLONNE CENTRE (Photos) --- */
 .cuisine-col-centre {
     display: flex;
     flex: 2;
@@ -190,17 +179,15 @@ h2 {
     object-fit: cover;
     border-radius: 20px;
     max-height: 450px;
-    /* Sécurité pour ne pas que les images sortent de l'écran */
 }
 
 .photo-item p {
     margin-top: 8px;
     font-size: 1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: bold;
+    font-weight: bold;
 }
 
-/* --- COLONNE DROITE --- */
 .cuisine-col-droite {
     flex: 1;
     position: relative;
@@ -213,10 +200,10 @@ h2 {
 }
 
 .mandarine-header img {
-   width: 150px;
-    margin-left: auto;  /* Pousse l'image vers la droite */
-    margin-right: auto; /* Si combiné avec le premier, centre l'image */
-    margin-top: -20px;  /* Pour la faire remonter si nécessaire */
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
 }
 
 .cuisine-col-droite p {
@@ -224,98 +211,136 @@ h2 {
     line-height: 1.4;
 }
 
-.requin-bloc img{
+.requin-bloc img {
     border-radius: 40px;
 }
 
-.cuisine-col-droite img{
+.cuisine-col-droite img {
     border-radius: 20px;
 }
 
-/* --- RESPONSIVE DESIGN (Tablettes et Mobiles) --- */
+.table-divertissement {
+    overflow-x: hidden;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border-collapse: collapse;
+    background-color: powderblue;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #240986;
+}
+
+.mon-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-link {
+    color: #923923;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*  SECTION RESPONSIV (TABLEttE)  */
 
 @media screen and (max-width: 768px) {
-    
-    /* On empile les boutons du menu de navigation */
     .main-nav {
         flex-direction: column;
         gap: 10px;
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
     }
 
     .nav-button {
-        width: 80%; /* Les boutons prennent presque toute la largeur */
+        width: 80%;
         text-align: center;
         padding: 12px 0;
+        flex: none;
+        max-width: 300px;
     }
 
-    /* Pour empiler les 3 images de l'accueil verticalement */
-    .accueil-container {
+    .sub-nav {
         flex-direction: column;
+        gap: 10px;
+        width: 90%;
         align-items: center;
-        gap: 20px;
     }
 
-    .accueil-column img {
-        width: 100%;
-        max-width: 400px; /* Évite que l'image ne devienne géante sur tablette */
-        height: auto;
+    .sub-nav a {
+        display: block;
+        width: 50%;
+        max-width: 400px;
+        text-align: center;
+        padding: 12px 20px;
     }
 
-    /* On réduit la taille du titre pour mobile */
     h1 {
         font-size: 30px;
         padding: 0 10px;
     }
-    /* --- Styles spécifiques pour la page Jeju (Mobile) --- */
 
-    /* On empile le texte et les stats */
     .jeju-container {
         flex-direction: column;
         gap: 20px;
     }
 
-    /* La grille de stats passe en 1 seule colonne ou reste en 2 selon ton choix */
-    /* Ici, on la laisse en 2 colonnes pour gagner de la place en hauteur */
     .stats-grid {
         max-width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Section Traditions : on empile les images et le texte */
     .traditions {
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
 
-    /* On annule les colonnes de texte internes pour que ce soit lisible sur mobile */
     .colonnes-interne {
         column-count: 1;
     }
 
-    /* On s'assure que les images de Jeju prennent la largeur disponible */
     .col-image img {
         width: 100%;
         max-width: 500px;
     }
 
-    /* Section Cuisine : on empile les 3 colonnes principales */
     .cuisine-container {
         flex-direction: column;
         gap: 30px;
     }
 
-    /* Les photos de plats se mettent les unes sous les autres */
     .cuisine-col-centre {
         flex-direction: column;
         width: 100%;
     }
 
     .photo-item img {
-        max-height: 300px; /* On réduit un peu la hauteur pour mobile */
+        max-height: 300px;
     }
 
-    /* On centre les éléments de la colonne de droite (mandarine) */
     .cuisine-col-droite {
         text-align: center;
     }
@@ -325,14 +350,35 @@ h2 {
         margin-top: 10px;
     }
 
-    /* Bannière du haut : on ajuste l'image et le texte */
+    .divertissement-container {
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .table-divertissement {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
     .banniere-container img {
         width: 100%;
-        height: 200px; /* On limite la hauteur pour ne pas manger tout l'écran */
+        height: 200px;
         object-fit: cover;
     }
 
     .banniere-container h1 {
         font-size: 24px;
+    }
+}
+
+/*  SECTION RESPONSIV (MOBIL)  */
+
+@media screen and (max-width: 480px) {
+    .mon-footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 }
